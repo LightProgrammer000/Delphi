@@ -1,0 +1,148 @@
+object frmBlocoNotas: TfrmBlocoNotas
+  Left = 270
+  Top = 234
+  Width = 928
+  Height = 480
+  Caption = 'Bloco de Notas'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Icon.Data = {
+    0000010001002020100000000000E80200001600000028000000200000004000
+    0000010004000000000080020000000000000000000000000000000000000000
+    000000008000008000000080800080000000800080008080000080808000C0C0
+    C0000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000099990000000910091009100000000
+    0091001900000091019900910000000001100001100000910119009100000000
+    0910000000000091090110910000000009000000000000910901109100000000
+    0900000000000091110090910000000009100000000000919000119100000000
+    0110000910000091900011910000000000910019000000991000099100000000
+    0009999000000099100001910000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000000000000000000000000000000000000000}
+  Menu = MainMenu
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object memTexto: TMemo
+    Left = 0
+    Top = 0
+    Width = 912
+    Height = 421
+    Align = alClient
+    Lines.Strings = (
+      'memTexto')
+    TabOrder = 0
+    OnChange = memTextoChange
+  end
+  object MainMenu: TMainMenu
+    Left = 8
+    Top = 344
+    object Arquivo: TMenuItem
+      Caption = '&Arquivo'
+      object itmNovo: TMenuItem
+        Caption = '&Novo'
+        OnClick = itmNovoClick
+      end
+      object itmAbrir: TMenuItem
+        Caption = 'A&brir'
+        OnClick = itmAbrirClick
+      end
+      object itmSalvar: TMenuItem
+        Caption = '&Salvar'
+        OnClick = itmSalvarClick
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object itmSair: TMenuItem
+        Caption = 'Sai&r'
+        OnClick = itmSairClick
+      end
+    end
+    object Editar: TMenuItem
+      Caption = '&Editar'
+      object itmRecortar: TMenuItem
+        Caption = '&Recortar'
+        ShortCut = 16472
+        OnClick = itmRecortarClick
+      end
+      object itmCopiar: TMenuItem
+        Caption = '&Copiar'
+        ShortCut = 16451
+        OnClick = itmCopiarClick
+      end
+      object itmColar: TMenuItem
+        Caption = 'Co&lar'
+        ShortCut = 16470
+        OnClick = itmColarClick
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object itmFormatarFonte: TMenuItem
+        Caption = 'Formatar &Fonte'
+        object itmFonte: TMenuItem
+          Caption = 'Fonte...'
+          OnClick = itmFonteClick
+        end
+        object itmCor: TMenuItem
+          Caption = 'Cor...'
+          OnClick = itmCorClick
+        end
+        object N3: TMenuItem
+          Caption = '-'
+        end
+        object itmNegrito: TMenuItem
+          Caption = 'Negrito'
+          ShortCut = 16462
+          OnClick = itmNegritoClick
+        end
+        object itmItlico: TMenuItem
+          Caption = 'It'#225'lico'
+          ShortCut = 16457
+          OnClick = itmItlicoClick
+        end
+      end
+    end
+  end
+  object OpenDialog: TOpenDialog
+    Left = 64
+    Top = 344
+  end
+  object SaveDialog: TSaveDialog
+    DefaultExt = 'txt'
+    Filter = 'Documentos de texto (*.txt)|*.txt|Todos os documentos (*.*)|*.*'
+    Left = 112
+    Top = 344
+  end
+  object FontDialog: TFontDialog
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    Left = 168
+    Top = 344
+  end
+  object ColorDialog: TColorDialog
+    Left = 224
+    Top = 344
+  end
+end
